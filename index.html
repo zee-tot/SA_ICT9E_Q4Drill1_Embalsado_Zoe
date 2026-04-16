@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Electricity Consumption Classifier</title>
+</head>
+<body>
+
+    <div class="d-flex justify-content-center align-items-center py-5 px-3">
+
+        <div class="main-card">
+
+            <!-- Logo & Title -->
+            <div class="text-center mb-3">
+                <span class="logo-icon">⚡</span>
+                <h1 id="kWh">kWh</h1>
+            </div>
+
+            <div class="title-banner">
+                <h3>Electricity Consumption Classifier</h3>
+            </div>
+
+            <!-- About paragraph -->
+            <div class="info-box">
+                <strong>What is this tool?</strong><br>
+                This classifier determines your electricity consumption tier based on the number of
+                kilowatt-hours (kWh) you consume per month. Enter your monthly usage below to see
+                which category you fall under and what it means for your billing rate.
+            </div>
+
+            <!-- Input Section -->
+            <div class="mb-2">
+                <label for="consumption" class="form-label" style="font-size:0.85rem; color:#7aaddb; margin-bottom:4px;">
+                    Monthly Consumption (kWh)
+                </label>
+                <input type="number" id="consumption" placeholder="e.g. 150" min="0">
+            </div>
+
+            <!-- Error message -->
+            <p class="mb-2"><span id="message1"></span></p>
+
+            <!-- Classify Button -->
+            <button class="btn-classify" onclick="check_class()">⚡ Classify Consumption</button>
+
+            <!-- Result Box -->
+            <div id="result-box">
+                <div id="result-label">—</div>
+                <div id="result-desc">—</div>
+                <div id="result-range">—</div>
+                <button class="btn-classify mt-3" onclick="resetForm()" style="background: #1e3a5f; font-size:0.68rem;">
+                    ↺ Reset
+                </button>
+            </div>
+
+            <!-- Classification Tiers Table -->
+            <div class="info-box mt-3" style="padding-bottom: 0.5rem;">
+                <strong>Classification Tiers</strong>
+                <table class="tier-table mt-2">
+                    <thead>
+                        <tr>
+                            <th>Range (kWh)</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 – 100</td><td>Lifeline Consumer</td></tr>
+                        <tr><td>101 – 200</td><td>Low Consumption</td></tr>
+                        <tr><td>201 – 300</td><td>Average Consumption</td></tr>
+                        <tr><td>301 – 500</td><td>High Consumption</td></tr>
+                        <tr><td>Above 500</td><td>Very High Consumption</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Source Link -->
+            <div class="source-link">
+                Source: <a href="https://www.meralco.com.ph" target="_blank">Meralco Rate Guide</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>

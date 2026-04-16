@@ -1,0 +1,214 @@
+body {
+    background: linear-gradient(135deg, #0a0e1a 0%, #0d1f3c 50%, #091a2e 100%);
+    min-height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
+    color: #cce0ff;
+}
+ 
+/* === Heading Style === */
+h1, h3, h4 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+}
+ 
+/* === kWh Label === */
+#kWh {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #00d4ff;
+    text-shadow: 0 0 12px #00d4ff88;
+    letter-spacing: 4px;
+}
+ 
+/* === Main Card === */
+.main-card {
+    background: linear-gradient(145deg, #0d1b2e, #112240);
+    border: 1px solid #1e3a5f;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #00d4ff22, inset 0 0 20px #00000044;
+    padding: 2rem;
+    max-width: 520px;
+    width: 100%;
+}
+ 
+/* === Title Banner === */
+.title-banner {
+    background: linear-gradient(90deg, #00d4ff22, #0057b822);
+    border-left: 4px solid #00d4ff;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1.2rem;
+}
+ 
+.title-banner h3 {
+    font-size: 1rem;
+    color: #00d4ff;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+ 
+/* === Info Paragraph Boxes === */
+.info-box {
+    background: #0a1628;
+    border: 1px solid #1e3a5f;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+    color: #7aaddb;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+ 
+.info-box strong {
+    color: #00d4ff;
+}
+ 
+/* === Input Field === */
+#consumption {
+    background: #071325;
+    border: 1px solid #1e4a70;
+    color: #cce0ff;
+    border-radius: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    padding: 0.55rem 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+ 
+#consumption:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 8px #00d4ff55;
+    color: #ffffff;
+}
+ 
+#consumption::placeholder {
+    color: #3a6080;
+}
+
+/* Remove number input spinner arrows */
+#consumption::-webkit-outer-spin-button,
+#consumption::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+/* === Classify Button === */
+.btn-classify {
+    background: linear-gradient(90deg, #00d4ff, #0057b8);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.65rem 1.4rem;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+}
+ 
+.btn-classify:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+ 
+.btn-classify:active {
+    transform: scale(0.97);
+}
+ 
+/* === Result Display === */
+#result-box {
+    display: none;
+    background: #071325;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    border: 1px solid #1e4a70;
+}
+ 
+#result-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+ 
+#result-desc {
+    font-size: 0.9rem;
+    color: #7aaddb;
+    margin-top: 0.3rem;
+}
+ 
+#result-range {
+    font-size: 0.78rem;
+    color: #3a6080;
+    margin-top: 0.2rem;
+}
+ 
+/* === Error Message === */
+#message1 {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #ff6b6b;
+}
+ 
+/* === Classification Table === */
+.tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+}
+ 
+.tier-table th {
+    background: #0a1628;
+    color: #00d4ff;
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid #1e3a5f;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+}
+ 
+.tier-table td {
+    padding: 0.35rem 0.6rem;
+    border-bottom: 1px solid #0d1f3c;
+    color: #7aaddb;
+}
+ 
+.tier-table tr:hover td {
+    background: #0d1f3c;
+    color: #cce0ff;
+}
+ 
+/* === Logo Icon === */
+.logo-icon {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.3rem;
+    filter: drop-shadow(0 0 8px #00d4ff88);
+}
+ 
+/* === Source Link === */
+.source-link {
+    font-size: 0.78rem;
+    color: #3a6080;
+    text-align: center;
+    margin-top: 1rem;
+}
+ 
+.source-link a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+ 
+.source-link a:hover {
+    text-decoration: underline;
+}
